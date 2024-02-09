@@ -19,7 +19,9 @@ namespace Blockcore.Node
                 case "BTC":
                     nodeSettings = new NodeSettings(networksSelector: Blockcore.Networks.Bitcoin.Networks.Bitcoin, args: args);
                     break;
-
+                case "BBTC":
+                    nodeSettings = new NodeSettings(networksSelector: Blockcore.Networks.Bigcoin.Networks.Bigcoin, args: args);
+                    break;
                 case "CITY":
                     nodeSettings = new NodeSettings(networksSelector: Blockcore.Networks.City.Networks.Networks.City, args: args);
                     break;

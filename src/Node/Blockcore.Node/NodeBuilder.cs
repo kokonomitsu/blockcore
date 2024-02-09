@@ -33,6 +33,7 @@ namespace Blockcore.Node
 
             switch (chain)
             {
+                case "BBTC":
                 case "BTC":
                 case "XRC":
                     nodeBuilder.UsePowConsensus().AddMining().UseWallet();
