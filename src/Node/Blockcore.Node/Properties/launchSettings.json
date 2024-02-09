@@ -1,5 +1,9 @@
 {
   "profiles": {
+    "BBTC (MAIN)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser"
+    },
     "BCP (MAIN)": {
       "commandName": "Project",
       "commandLineArgs": "--chain=BCP -server -iprangefiltering=0 -maxtipage=2147483647 -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=rocksdbdata"

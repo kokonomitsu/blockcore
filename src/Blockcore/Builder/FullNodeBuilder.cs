@@ -245,6 +245,7 @@ namespace Blockcore.Builder
             {
                 try
                 {
+                    
                     featureRegistration.EnsureDependencies(this.Features.FeatureRegistrations);
                 }
                 catch (MissingDependencyException e)
