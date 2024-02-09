@@ -114,7 +114,7 @@ namespace Blockcore.Networks.Bigcoin
 
             this.StandardScriptsRegistry = new BigcoinStandardScriptsRegistry();
 
-            Assert(this.Consensus.HashGenesisBlock == uint256.Parse("0x0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"));
+            Assert(this.Consensus.HashGenesisBlock == uint256.Parse("0x06ce4fa496c16e7e3ee125e52d5ce0e364d7ab31a167f579d3e2e1ead1791f0d"));
 
             this.RegisterRules(this.Consensus);
             this.RegisterMempoolRules(this.Consensus);

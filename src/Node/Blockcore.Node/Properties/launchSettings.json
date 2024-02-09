@@ -4,6 +4,38 @@
       "commandName": "Project",
       "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser"
     },
+    "BBTC (MAIN/LOW-MEM)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -maxblkmem=5 -dbcache=50"
+    },
+    "BBTC (TEST)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -testnet"
+    },
+    "BBTC (REGTEST)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -regtest"
+    },
+    "BBTC (MAIN/LOCAL)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=nodedata"
+    },
+    "BBTC (MAIN/LOCAL/ROCKSDB)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -dbtype=rocksdb -datadir=data"
+    },
+    "BBTC (TEST/LOCAL)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=nodedata -testnet"
+    },
+    "BBTC (MAIN/LOCAL/DEFAULT)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=nodedata -defaultwalletname=default -defaultwalletpassword=default -unlockdefaultwallet -server"
+    },
+    "BBTC (TEST/LOCAL/DEFAULT)": {
+      "commandName": "Project",
+      "commandLineArgs": "--chain=BBTC -server -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=nodedata -defaultwalletname=default -defaultwalletpassword=default -unlockdefaultwallet -server -testnet"
+    },
     "BCP (MAIN)": {
       "commandName": "Project",
       "commandLineArgs": "--chain=BCP -server -iprangefiltering=0 -maxtipage=2147483647 -rpcallowip=127.0.0.1 -rpcbind=127.0.0.1 -rpcpassword=rpcpassword -rpcuser=rpcuser -datadir=rocksdbdata"
