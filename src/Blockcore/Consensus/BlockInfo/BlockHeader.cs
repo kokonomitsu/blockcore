@@ -181,8 +181,10 @@ namespace Blockcore.Consensus.BlockInfo
             BigInteger bits = this.Bits.ToBigInteger();
             if ((bits.CompareTo(BigInteger.Zero) <= 0) || (bits.CompareTo(pow256) >= 0))
                 return false;
-
-            return this.GetPoWHash() <= this.Bits.ToUInt256();
+            var u256 = this.Bits.ToUInt256();
+            var hash = this.GetHash();
+            bool result = hash <= u256;
+            return result;
         }
 
         /// <inheritdoc />

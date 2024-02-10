@@ -258,8 +258,7 @@ namespace Blockcore.Features.Miner
             context.ExtraNonce = this.IncrementExtraNonce(context.BlockTemplate.Block, context.ChainTip, context.ExtraNonce);
 
             Block block = context.BlockTemplate.Block;
-            //  while ((context.MaxTries > 0) && (block.Header.Nonce < InnerLoopCount) && !block.CheckProofOfWork())
-            while ((context.MaxTries > 0) && !block.CheckProofOfWork())
+            while ((context.MaxTries > 0) && (block.Header.Nonce < InnerLoopCount) && !block.CheckProofOfWork())
             {
                 if (this.miningCancellationTokenSource == null)
                 {

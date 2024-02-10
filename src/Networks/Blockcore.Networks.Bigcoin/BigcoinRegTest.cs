@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Blockcore.Base.Deployments;
 using Blockcore.Consensus;
 using Blockcore.Consensus.BlockInfo;
@@ -110,7 +111,9 @@ namespace Blockcore.Networks.Bigcoin
 
             this.Checkpoints = new Dictionary<int, CheckpointInfo>();
             this.DNSSeeds = new List<DNSSeedData>();
-            this.SeedNodes = new List<NetworkAddress>();
+           // this.SeedNodes = new List<NetworkAddress>();
+            string[] seedNodes = { "192.168.2.114", "192.168.2.106", "192.168.2.116" };
+            this.SeedNodes = ConvertToNetworkAddresses(seedNodes, this.DefaultPort).ToList();
 
             this.StandardScriptsRegistry = new BigcoinStandardScriptsRegistry();
 
