@@ -27,7 +27,7 @@ namespace Blockcore.Networks.Bigcoin
             this.Name = "Main";
             this.AdditionalNames = new List<string> { "Mainnet" };
             this.NetworkType = NetworkType.Mainnet;
-
+            
             this.RootFolderName = BigcoinRootFolderName;
             this.DefaultConfigFilename = BigcoinDefaultConfigFilename;
             // The message start string is designed to be unlikely to occur in normal data.

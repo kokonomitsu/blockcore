@@ -781,8 +781,11 @@ namespace Blockcore.Networks
             }
 
             System.Reflection.Assembly assembly = this.GetType().Assembly;
-            var iconResource = assembly.GetManifestResourceNames().FirstOrDefault(r => r.Contains("icon"));
-
+            var iconResource = assembly.GetManifestResourceNames().FirstOrDefault(r => r.Contains("icon_" + this.Name?.ToLower()));
+            if (string.IsNullOrWhiteSpace(iconResource))
+            {
+                assembly.GetManifestResourceNames().FirstOrDefault(r => r.Contains("icon"));
+            }
             if (string.IsNullOrWhiteSpace(iconResource))
             {
                 assembly = typeof(Network).Assembly;

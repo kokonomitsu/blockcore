@@ -3,8 +3,8 @@
   <PropertyGroup>
     <Description>Bigcoin Network</Description>
     <AssemblyTitle>Blockcore.Networks.Bitcoin</AssemblyTitle>
-    <AssemblyName>Blockcore.Networks.Bitcoin</AssemblyName>
-    <PackageId>Blockcore.Networks.Bitcoin</PackageId>
+    <AssemblyName>Blockcore.Networks.Bigcoin</AssemblyName>
+    <PackageId>Blockcore.Networks.Bigcoin</PackageId>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
@@ -17,8 +17,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <AssemblyName>Blockcore.Networks.Bigcoin</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icon_testnet.png" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="icon.png" />
+    <EmbeddedResource Include="icon_testnet.png" />
   </ItemGroup>
 
   <ItemGroup>

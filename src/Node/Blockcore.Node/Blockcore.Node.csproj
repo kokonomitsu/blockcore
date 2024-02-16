@@ -7,11 +7,10 @@
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Networks\Blockcore.Networks.Bigcoin\Blockcore.Networks.Bigcoin.csproj" />
     <ProjectReference Include="..\..\Features\Blockcore.Features.Notifications\Blockcore.Features.Notifications.csproj" />
     <ProjectReference Include="..\..\Features\Blockcore.Features.WalletWatchOnly\Blockcore.Features.WalletWatchOnly.csproj" />
     <ProjectReference Include="..\..\Features\Persistence\Blockcore.Features.Persistence.Rocksdb.CorePackage\Blockcore.Features.Persistence.Rocksdb.CorePackage.csproj" />
-    <ProjectReference Include="..\..\Networks\Blockcore.Networks.Bitcoin\Blockcore.Networks.Bitcoin.csproj" />
+    <ProjectReference Include="..\..\Networks\Blockcore.Networks.Bigcoin\Blockcore.Networks.Bigcoin.csproj" />
     <ProjectReference Include="..\..\Features\Blockcore.Features.Dns\Blockcore.Features.Dns.csproj" />
     <ProjectReference Include="..\..\Features\Blockcore.Features.NodeHost\Blockcore.Features.NodeHost.csproj" />
     <ProjectReference Include="..\..\Features\Blockcore.Features.BlockStore\Blockcore.Features.BlockStore.csproj" />

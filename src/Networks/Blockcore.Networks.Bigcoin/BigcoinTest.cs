@@ -88,7 +88,7 @@ namespace Blockcore.Networks.Bigcoin
                 powAllowMinDifficultyBlocks: true,
                 posNoRetargeting: false,
                 powNoRetargeting: false,
-                powLimit: new Target(new uint256("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
+                powLimit: new Target(new uint256("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
                 minimumChainWork: uint256.Zero,
                 isProofOfStake: false,
                 lastPowBlock: default(int),
