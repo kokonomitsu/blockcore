@@ -90,7 +90,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blockcore.Networks.Bigcoin"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{464D5B8B-6924-4260-8FD1-CA5E35FBA883}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWork", "TestWork\TestWork.csproj", "{246722AE-3BF7-4EE1-86A9-3CDD2A87F2DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWork", "TestWork\TestWork.csproj", "{246722AE-3BF7-4EE1-86A9-3CDD2A87F2DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
