@@ -12,7 +12,7 @@ namespace Blockcore.Base.Deployments
         public const long DefaultMainnetThreshold = 1916;
 
         // 75% of 2016 blocks
-        public const long DefaultTestnetThreshold = 1512;
+        public const long DefaultTestnetThreshold = 15120;
 
         // 75% of 144 blocks
         public const long DefaultRegTestThreshold = 108;

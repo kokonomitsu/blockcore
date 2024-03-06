@@ -68,14 +68,14 @@ namespace Blockcore.Networks.Bigcoin
                 consensusOptions: new ConsensusOptions(), // Default - set to Bigcoin params.
                 coinType: 0,
                 hashGenesisBlock: genesisBlock.GetHash(),
-                subsidyHalvingInterval: 210000,
+                subsidyHalvingInterval: 2100000,
                 majorityEnforceBlockUpgrade: 51,
                 majorityRejectBlockOutdated: 75,
                 majorityWindow: 100,
                 buriedDeployments: buriedDeployments,
                 bip9Deployments: bip9Deployments,
                 bip34Hash: new uint256(),
-                minerConfirmationWindow: 4032,
+                minerConfirmationWindow: 20160,
                 maxReorgLength: 0,
                 defaultAssumeValid:null,// uint256.Zero, // 1354312
                 maxMoney: 210000000 * Money.COIN,
@@ -84,11 +84,11 @@ namespace Blockcore.Networks.Bigcoin
                 premineReward: Money.Zero,
                 proofOfWorkReward: Money.Coins(50),
                 targetTimespan: TimeSpan.FromSeconds(14 * 24 * 60 * 60), // two weeks
-                targetSpacing: TimeSpan.FromSeconds(10 * 60),
-                powAllowMinDifficultyBlocks: false,
+                targetSpacing: TimeSpan.FromSeconds(1 * 60),
+                powAllowMinDifficultyBlocks: true,
                 posNoRetargeting: false,
                 powNoRetargeting: false,
-                powLimit: new Target(new uint256("00000000000000000fffffffffffffffffffffffffffffffffffffffffffffff")),
+                powLimit: new Target(new uint256("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
                 minimumChainWork: uint256.Zero,
                 isProofOfStake: false,
                 lastPowBlock: default(int),
@@ -105,7 +105,7 @@ namespace Blockcore.Networks.Bigcoin
             this.Base58Prefixes[(int)Base58Type.EXT_SECRET_KEY] = new byte[] { (0x04), (0x35), (0x83), (0x94) };
             this.Base58Prefixes[(int)Base58Type.ASSET_ID] = new byte[] { 115 };
 
-            var encoder = new Bech32Encoder("tb");
+            var encoder = new Bech32Encoder("tbg");
             this.Bech32Encoders = new Bech32Encoder[2];
             this.Bech32Encoders[(int)Bech32Type.WITNESS_PUBKEY_ADDRESS] = encoder;
             this.Bech32Encoders[(int)Bech32Type.WITNESS_SCRIPT_ADDRESS] = encoder;
