@@ -70,7 +70,7 @@ namespace Blockcore.Features.NodeHost
 
             this.logger = nodeSettings.LoggerFactory.CreateLogger(typeof(NodeHostSettings).FullName);
 
-            this.ApiTitle = "Blockcore-" + nodeSettings.Network.CoinTicker;
+            this.ApiTitle = nodeSettings.Network.CoinTicker;
 
             TextFileConfiguration config = nodeSettings.ConfigReader;
 

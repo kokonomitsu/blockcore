@@ -194,8 +194,8 @@ namespace Blockcore.Features.NodeHost
                                Description = description,
                                Contact = new OpenApiContact
                                {
-                                   Name = "Blockcore",
-                                   Url = new Uri("https://www.blockcore.net/")
+                                   Name = "Bigcoin",
+                                   Url = new Uri("https://www.bigbtc.org/")
                                }
                            });
 

@@ -775,11 +775,7 @@ namespace Blockcore.Networks
 
         public string FavoriteIcon()
         {
-            if (!string.IsNullOrWhiteSpace(this.icon))
-            {
-                return this.icon;
-            }
-
+           
             System.Reflection.Assembly assembly = this.GetType().Assembly;
             var iconResource = assembly.GetManifestResourceNames().FirstOrDefault(r => r.Contains("icon_" + this.Name?.ToLower()));
             if (string.IsNullOrWhiteSpace(iconResource))
@@ -797,6 +793,10 @@ namespace Blockcore.Networks
                 byte[] bytes = new BinaryReader(stream).ReadBytes((int)stream.Length);
                 this.icon = Convert.ToBase64String(bytes);
             }
+            //if (!string.IsNullOrWhiteSpace(this.icon))
+            //{
+            //    return this.icon;
+            //}
 
             return this.icon;
         }

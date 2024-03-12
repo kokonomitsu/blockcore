@@ -51,9 +51,9 @@ namespace Blockcore.Networks.Bigcoin
             var consensusFactory = new ConsensusFactory();
 
             // Create the genesis block.
-            this.GenesisTime = 1706754520;
-            this.GenesisNonce = 1167454971;
-            this.GenesisBits = 0x1d00ffff;
+            this.GenesisTime = 1709914688;
+            this.GenesisNonce = 623989;
+            this.GenesisBits = 0x1e0ff000;
             this.GenesisVersion = 1;
             this.GenesisReward = Money.Coins(50m);
 
@@ -86,7 +86,7 @@ namespace Blockcore.Networks.Bigcoin
                 consensusOptions: new ConsensusOptions(), // Default - set to Bigcoin params.
                 coinType: 0,
                 hashGenesisBlock: genesisBlock.GetHash(),
-                subsidyHalvingInterval: 210000,
+                subsidyHalvingInterval: 2100000,
                 majorityEnforceBlockUpgrade: 750,
                 majorityRejectBlockOutdated: 950,
                 majorityWindow: 1000,
@@ -103,10 +103,10 @@ namespace Blockcore.Networks.Bigcoin
                 proofOfWorkReward: Money.Coins(50),
                 targetTimespan: TimeSpan.FromSeconds(7 * 24 * 60 * 60), // one weeks
                 targetSpacing: TimeSpan.FromSeconds(1 * 60),
-                powAllowMinDifficultyBlocks: true,
+                powAllowMinDifficultyBlocks: false,
                 posNoRetargeting: false,
                 powNoRetargeting: false,
-                powLimit: new Target(new uint256("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
+                powLimit: new Target(new uint256("00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff")),
                 minimumChainWork: uint256.One,
                 isProofOfStake: false,
                 lastPowBlock: default(int),
@@ -128,7 +128,7 @@ namespace Blockcore.Networks.Bigcoin
             this.Base58Prefixes[(int)Base58Type.CONFIRMATION_CODE] = new byte[] { 0x64, 0x3B, 0xF6, 0xA8, 0x9A };
             this.Base58Prefixes[(int)Base58Type.ASSET_ID] = new byte[] { 23 };
 
-            var encoder = new Bech32Encoder("bc");
+            var encoder = new Bech32Encoder("bgc");
             this.Bech32Encoders = new Bech32Encoder[2];
             this.Bech32Encoders[(int)Bech32Type.WITNESS_PUBKEY_ADDRESS] = encoder;
             this.Bech32Encoders[(int)Bech32Type.WITNESS_SCRIPT_ADDRESS] = encoder;
@@ -136,7 +136,7 @@ namespace Blockcore.Networks.Bigcoin
             // Partially obtained from https://github.com/bitcoin/bitcoin/blob/b1973d6181eacfaaf45effb67e0c449ea3a436b8/src/chainparams.cpp#L146
             this.Checkpoints = new Dictionary<int, CheckpointInfo>
             {
-                { 0, new CheckpointInfo(new uint256("0x00000000f565ea242bb85208172177fd0059344d581e48e2c472adfe78ea34d9"))},
+                { 0, new CheckpointInfo(new uint256("0x00000e93f1a71e0f151b6c5f3ff375569ac5ec3b8b8d27aec1c3419c774c2a3c"))},
               
             };
 
@@ -150,12 +150,12 @@ namespace Blockcore.Networks.Bigcoin
                // new DNSSeedData("bitcoin.jonasschnelli.ch", "seed.bitcoin.jonasschnelli.ch") // Jonas Schnelli
             };
 
-            string[] seedNodes = { "8.209.110.106", "121.41.130.3", "121.41.129.118", "121.41.32.63", "121.40.247.124" };
+            string[] seedNodes = { "8.219.158.4","8.222.190.167","47.236.20.126","8.219.55.128" };
             this.SeedNodes = ConvertToNetworkAddresses(seedNodes, this.DefaultPort).ToList();
 
             this.StandardScriptsRegistry = new BigcoinStandardScriptsRegistry();
 
-            Assert(this.Consensus.HashGenesisBlock == uint256.Parse("0x00000000f565ea242bb85208172177fd0059344d581e48e2c472adfe78ea34d9"));
+            Assert(this.Consensus.HashGenesisBlock == uint256.Parse("0x00000e93f1a71e0f151b6c5f3ff375569ac5ec3b8b8d27aec1c3419c774c2a3c"));
             Assert(this.Genesis.Header.HashMerkleRoot == uint256.Parse("0x95b40e9bac3c952c97e04fe0f3b8b47590d3a3ecf4b1e113cdfa4991f104b474"));
 
             this.RegisterRules(this.Consensus);
